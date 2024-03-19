@@ -10,8 +10,10 @@ namespace Engine
 		Vector2 position;
 		Vector2 offset;
 		int order = 0;
+		float rotation = 0;
+		float scale = 1;
 
-		TransformComponent(const Vector2& position, const Vector2& offset, int order);
+		TransformComponent(const Vector2& position, const Vector2& offset);
 	};
 }
 

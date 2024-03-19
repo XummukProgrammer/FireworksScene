@@ -28,8 +28,11 @@ public:
         particlesComponent.type = Engine::ParticlesComponent::Type::Loop;
         particlesComponent.lifeTime = 1;
         particlesComponent.textureId = "TestParticle";
+        particlesComponent.startRotation = 0;
+        particlesComponent.startScale = 0.5;
+        particlesComponent.startColor = CLITERAL(Color) { 255, 255, 255, 25 };
         particlesComponent.explosionDelay = 1;
-        particlesComponent.particlesInExplosion = 1;
+        particlesComponent.particlesInExplosion = 3;
 
         app->GetContext().scene.RefreshTransforms();
     }

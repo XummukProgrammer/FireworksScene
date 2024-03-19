@@ -19,8 +19,12 @@ namespace Engine
 		void SetTextureByResources(std::string_view id, Resources& resources);
 		std::shared_ptr<ResourceTexture> GetTexture() const { return _weakTexturePtr.lock(); }
 
+		void SetColor(const Color& color) { _color = color; }
+		const Color& GetColor() const { return _color; }
+
 	private:
 		std::weak_ptr<ResourceTexture> _weakTexturePtr;
+		Color _color = WHITE;
 	};
 }
 

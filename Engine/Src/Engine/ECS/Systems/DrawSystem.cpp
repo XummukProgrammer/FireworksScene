@@ -19,7 +19,7 @@ namespace Engine
                         pos.x = transformComponent.position.x + transformComponent.offset.x;
                         pos.y = transformComponent.position.y + transformComponent.offset.y;
 
-                        DrawTextureEx(texturePtr->GetTexture(), pos, 0.f, 1.f, WHITE);
+                        DrawTextureEx(texturePtr->GetTexture(), pos, transformComponent.rotation, transformComponent.scale, textureComponent.GetColor());
                     }
                 }
             });

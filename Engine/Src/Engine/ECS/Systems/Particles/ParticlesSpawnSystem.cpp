@@ -40,8 +40,11 @@ namespace Engine
         Vector2 pos;
         pos.x = context.random.GetInt(0, 100);
         pos.y = context.random.GetInt(0, 100);
-        auto& transformComponent = registry.emplace<TransformComponent>(particle, pos, Vector2(), 0);
+        auto& transformComponent = registry.emplace<TransformComponent>(particle, pos, Vector2());
+        transformComponent.rotation = particlesComponent.startRotation;
+        transformComponent.scale = particlesComponent.startScale;
         auto& textureComponent = registry.emplace<TextureComponent>(particle, particlesComponent.textureId, context);
+        textureComponent.SetColor(particlesComponent.startColor);
         auto& particleComponent = registry.emplace<ParticleComponent>(particle);
         particleComponent.lifeTime = particlesComponent.lifeTime;
     }

@@ -1,6 +1,8 @@
 ﻿#ifndef _PARTICLES_COMPONENT_HEADER_
 #define _PARTICLES_COMPONENT_HEADER_
 
+#include "raylib.h"
+
 #include <string>
 
 namespace Engine
@@ -23,6 +25,9 @@ namespace Engine
 
 		float lifeTime;
 		std::string textureId;
+		float startRotation;
+		float startScale;
+		Color startColor;
 		
 		float explosionDelay;
 		int particlesInExplosion;
