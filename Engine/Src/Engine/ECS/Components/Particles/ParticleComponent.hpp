@@ -13,6 +13,9 @@ namespace Engine
 		};
 
 		float lifeTime;
+		Vector2 moveDirection;
+		float moveSpeed;
+
 		System system;
 	};
 }

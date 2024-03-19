@@ -47,6 +47,11 @@ namespace Engine
         textureComponent.SetColor(particlesComponent.startColor);
         auto& particleComponent = registry.emplace<ParticleComponent>(particle);
         particleComponent.lifeTime = particlesComponent.lifeTime;
+        Vector2 moveDirection;
+        moveDirection.x = -1;
+        moveDirection.y = -1;
+        particleComponent.moveDirection = moveDirection;
+        particleComponent.moveSpeed = particlesComponent.startSpeed;
     }
 
     void ParticlesSpawnSystem::SpawnParticles(entt::registry& registry, Context& context, ParticlesComponent& particlesComponent)

@@ -37,6 +37,7 @@ set(ENGINE_HEADERS
 	
 	src/Engine/ECS/Systems/Particles/ParticlesSpawnSystem.hpp
 	src/Engine/ECS/Systems/Particles/ParticlesLifeSystem.hpp
+	src/Engine/ECS/Systems/Particles/ParticlesMoveSystem.hpp
 )
 
 set(ENGINE_SOURCES
@@ -76,4 +77,5 @@ set(ENGINE_SOURCES
 	
 	src/Engine/ECS/Systems/Particles/ParticlesSpawnSystem.cpp
 	src/Engine/ECS/Systems/Particles/ParticlesLifeSystem.cpp
+	src/Engine/ECS/Systems/Particles/ParticlesMoveSystem.cpp
 )

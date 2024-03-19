@@ -28,6 +28,7 @@ namespace Engine
 		float startRotation;
 		float startScale;
 		Color startColor;
+		float startSpeed;
 		
 		float explosionDelay;
 		int particlesInExplosion;

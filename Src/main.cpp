@@ -5,6 +5,7 @@
 #include <Engine/ECS/Systems/DrawSystem.hpp>
 #include <Engine/ECS/Systems/Particles/ParticlesSpawnSystem.hpp>
 #include <Engine/ECS/Systems/Particles/ParticlesLifeSystem.hpp>
+#include <Engine/ECS/Systems/Particles/ParticlesMoveSystem.hpp>
 
 class ApplicationDelegate final : public Engine::ApplicationDelegate
 {
@@ -17,6 +18,7 @@ public:
     {
         app->GetContext().systems.AddAndCreateSystem<Engine::ParticlesSpawnSystem>();
         app->GetContext().systems.AddAndCreateSystem<Engine::ParticlesLifeSystem>();
+        app->GetContext().systems.AddAndCreateSystem<Engine::ParticlesMoveSystem>();
         app->GetContext().systems.AddAndCreateSystem<Engine::DrawSystem>();
 
         Engine::ResourcesParser::LoadFromXMLFile(app->GetContext().fileSystem.BuildPath(Engine::DirType::Assets, "Assets.xml"), app->GetContext());
@@ -33,6 +35,7 @@ public:
         particlesComponent.startColor = CLITERAL(Color) { 255, 255, 255, 25 };
         particlesComponent.explosionDelay = 1;
         particlesComponent.particlesInExplosion = 3;
+        particlesComponent.startSpeed = 50;
 
         app->GetContext().scene.RefreshTransforms();
     }
