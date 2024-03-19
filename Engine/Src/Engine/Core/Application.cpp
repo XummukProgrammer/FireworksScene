@@ -23,7 +23,9 @@ namespace Engine
         _context.input.SetOnMouseWheelMoveCallback(std::bind(&Application::OnMouseWheelMove, this, std::placeholders::_1));
 
         _context.systems.AddAndCreateSystem<RefreshTransformsSystem>();
-        _context.systems.AddAndCreateSystem<IsoDrawSystem>();
+        //_context.systems.AddAndCreateSystem<IsoDrawSystem>();
+
+        _context.random.Init();
 
         SetTargetFPS(1000);
 

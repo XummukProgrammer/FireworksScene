@@ -10,6 +10,7 @@
 #include <Engine/Core/Input.hpp>
 #include <Engine/Core/Time.hpp>
 #include <Engine/ECS/Systems.hpp>
+#include <Engine/Core/Random.hpp>
 
 namespace Engine
 {
@@ -24,6 +25,7 @@ namespace Engine
 		Input input;
 		Time time;
 		Systems systems;
+		Random random;
 	};
 }
 

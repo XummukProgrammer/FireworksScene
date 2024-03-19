@@ -9,6 +9,7 @@ set(ENGINE_HEADERS
 	src/Engine/Core/Input.hpp
 	src/Engine/Core/Time.hpp
 	src/Engine/Core/FileSystem.hpp
+	src/Engine/Core/Random.hpp
 	
 	src/Engine/Settings/Settings.hpp
 	src/Engine/Settings/IsoSettings.hpp
@@ -27,8 +28,15 @@ set(ENGINE_HEADERS
 	src/Engine/ECS/Components/TransformComponent.hpp
 	src/Engine/ECS/Components/RefreshTransformsComponent.hpp
 	
+	src/Engine/ECS/Components/Particles/ParticleComponent.hpp
+	src/Engine/ECS/Components/Particles/ParticlesComponent.hpp
+	
 	src/Engine/ECS/Systems/IsoDrawSystem.hpp
+	src/Engine/ECS/Systems/DrawSystem.hpp
 	src/Engine/ECS/Systems/RefreshTransformsSystem.hpp
+	
+	src/Engine/ECS/Systems/Particles/ParticlesSpawnSystem.hpp
+	src/Engine/ECS/Systems/Particles/ParticlesLifeSystem.hpp
 )
 
 set(ENGINE_SOURCES
@@ -41,6 +49,7 @@ set(ENGINE_SOURCES
 	src/Engine/Core/Input.cpp
 	src/Engine/Core/Time.cpp
 	src/Engine/Core/FileSystem.cpp
+	src/Engine/Core/Random.cpp
 	
 	src/Engine/Settings/Settings.cpp
 	src/Engine/Settings/IsoSettings.cpp
@@ -58,6 +67,13 @@ set(ENGINE_SOURCES
 	src/Engine/ECS/Components/TransformComponent.cpp
 	src/Engine/ECS/Components/RefreshTransformsComponent.cpp
 	
+	src/Engine/ECS/Components/Particles/ParticleComponent.cpp
+	src/Engine/ECS/Components/Particles/ParticlesComponent.cpp
+	
 	src/Engine/ECS/Systems/IsoDrawSystem.cpp
+	src/Engine/ECS/Systems/DrawSystem.cpp
 	src/Engine/ECS/Systems/RefreshTransformsSystem.cpp
+	
+	src/Engine/ECS/Systems/Particles/ParticlesSpawnSystem.cpp
+	src/Engine/ECS/Systems/Particles/ParticlesLifeSystem.cpp
 )
